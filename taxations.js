@@ -1,17 +1,17 @@
-var annualSalary = 1500000;      // Annual Salary
-var standardDeduction = 50000;   // Standard Deduction
-var pfDeduction = 1800;          // Monthly PF
-var ptDeduction = 200;           // Monthly PT
+let annualSalary = 1500000;      // Annual Salary
+let standardDeduction = 50000;   // Standard Deduction
+let pfDeduction = 1800;          // Monthly PF
+let ptDeduction = 200;           // Monthly PT
 
-var workingDaysPerMonth = 22;
-var hoursPerDay = 8;
+let workingDaysPerMonth = 22;
+let hoursPerDay = 8;
 
 // ---------- Step 1: Taxable Income ----------
-var taxableIncome = annualSalary - standardDeduction;
+let taxableIncome = annualSalary - standardDeduction;
 
 // ---------- Step 2: Calculate Income Tax ----------
-var tax = 0;
-var remainingIncome = taxableIncome;
+let tax = 0;
+let remainingIncome = taxableIncome;
 
 // Slab 1: 0 - 3,00,000 (0%)
 if (remainingIncome > 300000) {
@@ -70,17 +70,17 @@ if (remainingIncome > 0) {
 }
 
 // ---------- Step 3: Add 4% Cess ----------
-var cess = tax * 0.04;
+let cess = tax * 0.04;
 var totalTax = tax + cess;
 
 // ---------- Step 4: Monthly Calculations ----------
-var monthlyTax = totalTax / 12;
-var monthlyGrossSalary = annualSalary / 12;
-var monthlyNetSalary = monthlyGrossSalary - monthlyTax - pfDeduction - ptDeduction;
+let monthlyTax = totalTax / 12;
+let monthlyGrossSalary = annualSalary / 12;
+let monthlyNetSalary = monthlyGrossSalary - monthlyTax - pfDeduction - ptDeduction;
 
 // ---------- Step 5: Hourly Salary ----------
-var totalMonthlyHours = workingDaysPerMonth * hoursPerDay;
-var hourlySalary = monthlyNetSalary / totalMonthlyHours;
+let totalMonthlyHours = workingDaysPerMonth * hoursPerDay;
+let hourlySalary = monthlyNetSalary / totalMonthlyHours;
 
 // ---------- Output ----------
 console.log("========== Salary Breakdown ==========");
