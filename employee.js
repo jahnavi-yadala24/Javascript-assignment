@@ -29,7 +29,7 @@ let employees = [
 let trueCount = 0;
 let falseCount = 0;
 
-for (let i = 0; i < employees.length; i++) {
+for (let i = 0; i < employees.length-1; i++) {
 
     if (employees[i].salary >= 1500000 && employees[i].salary <= 1800000) {
 
